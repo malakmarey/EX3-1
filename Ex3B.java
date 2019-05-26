@@ -39,15 +39,17 @@ public class Ex3B {
 	 * @return a string array of file that we created.
 	 */
 	public static String[] createFiles(int n){
-		StringBuilder stringBuilder = new StringBuilder();
+		
 		Random r = new Random(123);
 
-		int Lines = r.nextInt(n); 
 		int a = 1;
 
 		String[] array = new String[n];
 		for (int i = 0; i < n; i++)
-		{
+		{	
+			int Lines = r.nextInt(n); 
+
+			StringBuilder stringBuilder = new StringBuilder();
 			for (int j = 0; j < Lines; j++) 
 				stringBuilder.append("Hello World" + System.lineSeparator());
 
